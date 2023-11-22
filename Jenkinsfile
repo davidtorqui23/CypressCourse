@@ -7,6 +7,8 @@ pipeline{
         
         stage("Cypress Parallel Test Suite") {
 
+            parallel{
+
             stage('Slave 1'){
 
                 agent {
@@ -48,6 +50,6 @@ pipeline{
 
         }
 
-
+        }
     }
 }
